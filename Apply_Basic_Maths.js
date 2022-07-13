@@ -58,5 +58,3 @@ console.log(index);
 }
 
 applyBasicMaths(5,[14,7,8,2,4])
-
-
