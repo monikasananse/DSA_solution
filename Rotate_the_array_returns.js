@@ -63,4 +63,4 @@ function rotation(length,k,arr)
     }
     console.log(arr.join(" "));
 }
-rotation(2,2,[1,2])
+rotation(4,2,[1,2,3])
