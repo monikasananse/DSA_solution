@@ -25,3 +25,17 @@
 
 // Sample Output 1
 // 3
+
+function empires(arr,size)
+{
+    arr.sort(function(a,b){    //6 5 4 3 2 1
+        return  b - a;
+    })
+    var sum=0;
+    for(var i=1; i<arr.length; i=i+2)
+    {
+        sum=sum+arr[i];
+    }
+    console.log(sum);
+}
+empires([1,3,1,2],4)
