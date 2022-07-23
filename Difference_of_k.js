@@ -34,3 +34,28 @@
 // Yes
 // No
 
+function k_difference(n,k,arr)
+{
+    var left=0;
+    var right=left+1;
+    var diff=0;
+    while(left<n && right<n)
+    {
+        diff=arr[right]-arr[left];
+        if(diff==k)
+        {
+            console.log("Yes");
+            return
+        }
+        else if(diff<k)
+        {
+            right++;
+        }
+        else if(diff>k)
+        {
+            left++;
+        }
+    }
+    console.log("No");
+}
+k_difference(5,3,[1,2,3,4,5])
