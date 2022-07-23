@@ -33,5 +33,36 @@
 // Sample Output 1
 // 1 2 3 4 5 
 
-
+function logic(length1,length2,arr1,arr2)
+{
+    for(var i=0; i<length2; i++)
+        {
+            arr1.push(arr2[i]);
+            
+        }
+        //console.log(arr1);
+        var obj={};
+        for(var i=0; i<arr1.length; i++)
+        {
+            if(obj[arr1[i]]==undefined)
+            {
+                obj[arr1[i]]=1;
+            }
+            else
+            {
+                obj[arr1[i]]++;
+            }
+        }
+        
+        var arr=[];
+        for(var key in obj)
+        {
+            arr.push(key);
+        }
+        arr.sort(function(a,b){
+            return a - b;
+        })
+        console.log(arr.join(" "));
+}
+logic(4,5,[1,2,3,4],[1,2,3,4,5])
 
