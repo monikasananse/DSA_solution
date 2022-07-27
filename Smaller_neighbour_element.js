@@ -59,3 +59,4 @@ function logic(n,arr)
     console.log(ans.join(" "));
 }
 logic(5,[32,12,56,20,89]);
+
