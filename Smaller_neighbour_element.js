@@ -36,3 +36,26 @@
 // Sample Output 1
 // -1 -1 -1 -1 4 24 24 -1
 
+function logic(n,arr)
+{
+    var stack=[];
+    var ans=[];
+    for(var i=0;i<n;i++)
+    {
+        while(stack.length!==0 && stack[stack.length-1]>=arr[i])
+        {
+            stack.pop();
+        }
+        if(stack.length===0)
+        {
+            ans.push(-1);
+        }
+        else
+        {
+            ans.push(stack[stack.length-1]);
+        }
+        stack.push(arr[i]);
+    }
+    console.log(ans.join(" "));
+}
+logic(5,[32,12,56,20,89]);
