@@ -29,4 +29,14 @@
 
 // education in Transformation A
 
-
+function logic(str)
+{
+    var arr=str.split(" ");
+    var str2="";
+    for(var i=arr.length-1;i>=0;i--)
+    {
+        str2=str2+arr[i]+" ";
+    }
+    console.log(str2);
+}
+logic('A Transformation In Education');
