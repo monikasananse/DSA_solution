@@ -38,3 +38,37 @@
 // balanced
 // not balanced
 
+function logic(str)
+{
+    var stack=[];
+    var obj={
+        "]":"[",
+        "}":"{",
+        ")":"("
+    };
+    for(var i=0;i<str.length;i++)
+    {
+        if(str[i]==="{"||str[i]==="("||str[i]==="[")
+        {
+            stack.push(str[i]);
+        }
+        else
+        {
+            if(obj[str[i]]!==stack[stack.length-1])
+            {
+                return "not balanced"; 
+            }
+            else
+            {
+                stack.pop();
+            }
+        }
+    }
+    if(stack.length!==0)
+    {
+        return "not balanced";   
+    }
+    return "balanced";
+}
+var str="{([])}";
+console.log(logic(str));
