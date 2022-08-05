@@ -22,3 +22,19 @@
 // Sample Output 1
 // false
 
+function compareSevenNumbers(a,b,c,d,e,f,g) {
+    // Write code here
+    var sum1= (a + b) * c;
+    var sum2=(d + e + f + g);
+    
+    if(sum1>sum2)
+    {
+        console.log("true");
+    }
+    else
+    {
+        console.log("false");
+    }
+    
+}
+compareSevenNumbers(2,3,45,6,5,8,9)
